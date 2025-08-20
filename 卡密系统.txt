@@ -1,0 +1,18 @@
+-- Whitelist System
+
+local Whitelist = {
+    [123456789] = true,
+    [987654321] = true,
+}
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+if not Whitelist[LocalPlayer.UserId] then
+    LocalPlayer:Kick("Unauthorized user. Please purchase access.")
+    return
+end
+
+print("Authorized successfully.")
+
+-- Your paid script code goes below
