@@ -1,0 +1,18 @@
+-- Username whitelist
+
+local Whitelist = {
+    ["kj_1145146"] = true,      -- replace with your Roblox username
+    ["AnotherPlayer"] = true      -- example
+}
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+if not Whitelist[LocalPlayer.Name] then
+    LocalPlayer:Kick("Unauthorized user. Please purchase access.")
+    return
+end
+
+print("Authorized successfully, welcome " .. LocalPlayer.Name)
+
+-- Your paid script code goes here
