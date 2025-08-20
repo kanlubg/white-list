@@ -1,9 +1,8 @@
 -- Whitelist System
 
 local Whitelist = {
-    [123456789] = true,
-    [987654321] = true,
-    [8302446118] = true,
+    [8302446118] = true, -- your ID
+    [987654321] = true,  -- example
 }
 
 local Players = game:GetService("Players")
@@ -14,6 +13,6 @@ if not Whitelist[LocalPlayer.UserId] then
     return
 end
 
-print("Authorized successfully.")
+print("Authorized successfully, welcome " .. LocalPlayer.Name)
 
--- Your paid script code goes below
+-- Your paid script code goes here
